@@ -1,9 +1,18 @@
 export interface SectionProps {
   children: React.ReactNode;
+  id?: string;
 }
 
 export default function ResumeBodySection({
   children,
+  id,
 }: Readonly<SectionProps>) {
-  return <section className="min-h-screen max-h-fit p-3">{children}</section>;
+  return (
+    <section
+      id={id}
+      className="min-h-screen p-8 pt-20 border-b border-gray-200 bg-white"
+    >
+      {children}
+    </section>
+  );
 }
